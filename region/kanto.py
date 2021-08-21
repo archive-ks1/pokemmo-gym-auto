@@ -7,7 +7,7 @@ except ModuleNotFoundError:
 
 def menu():
     print("Select your Kanto Gym")
-    menu_options = ["Pewter", "Cerulean", "Vermillion", "Celadon", "Fuchsia", "Saffron", "Cinnabar (WIP)", "Viridian (Unavailable)", "Back"]
+    menu_options = ["Pewter", "Cerulean", "Vermillion", "Celadon", "Fuchsia", "Saffron", "Cinnabar", "Viridian (Unavailable)", "Back"]
 
     for i in range(len(menu_options)):
         print("[{}] {}".format(i+1, menu_options[i]))
@@ -152,6 +152,19 @@ def saffron_pathing_in():
     pg.keyUp('w')
     print("Entering Saffron City Gym...")
 
+def cinnabar_pathing_in():
+    pg.keyDown('d')
+    sleep(0.5)
+    pg.keyUp('d')
+    pg.keyDown('w')
+    sleep(0.6)
+    pg.keyUp('w')
+    pg.press('a')
+    pg.keyDown('w')
+    sleep(0.3)
+    pg.keyUp('w')
+    print("Entering Cinnabar City Gym...")
+
 def main():
     menu()
     user_input = int(input('\nEnter option: '))
@@ -187,7 +200,9 @@ def main():
         saffron_pathing_in()
 
     elif user_input == 7:
-        print("Unavailable")
+        initialize("Cinnabar")
+        pg.press('2')
+        cinnabar_pathing_in()
 
     elif user_input == 8:
         print("Viridian City Gym is currently not scripted in PokeMMO")

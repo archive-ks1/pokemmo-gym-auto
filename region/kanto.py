@@ -7,7 +7,7 @@ except ModuleNotFoundError:
 
 def menu():
     print("Select your Kanto Gym")
-    menu_options = ["Pewter", "Cerulean", "Vermillion", "Celadon", "Fuchsia (WIP)", "Saffron (WIP)", "Cinnabar (WIP)", "Viridian (Not Scripted in PokeMMO)", "Back"]
+    menu_options = ["Pewter", "Cerulean", "Vermillion", "Celadon", "Fuchsia", "Saffron (WIP)", "Cinnabar (WIP)", "Viridian (Not Scripted in PokeMMO)", "Back"]
 
     for i in range(len(menu_options)):
         print("[{}] {}".format(i+1, menu_options[i]))
@@ -134,6 +134,18 @@ def celadon_pathing_in():
     pg.keyUp('w')
     print("Entering Celadon City Gym...")
 
+def fuchsia_pathing_in():
+    initialize("Fuchsia")
+    pg.press('2')
+    pg.press('s')
+    pg.keyDown('a')
+    sleep(1.2)
+    pg.keyUp('a')
+    pg.keyDown('w')
+    sleep(0.4)
+    pg.keyUp('w')
+    print("Entering Fuchsia City Gym...")
+
 def main():
     menu()
     user_input = int(input('\nEnter option: '))
@@ -151,7 +163,7 @@ def main():
         celadon_pathing_in()
 
     elif user_input == 5:
-        print("Unavailable")
+        fuchsia_pathing_in()
 
     elif user_input == 6:
         print("Unavailable")

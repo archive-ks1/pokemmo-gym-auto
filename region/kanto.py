@@ -6,8 +6,8 @@ except ModuleNotFoundError:
     print("Please install pydirectinput library using 'pip install pydirectinput'")
 
 def menu():
-    print("Kanto Gyms")
-    menu_options = ["Pewter", "Cerulean", "Vermillion", "Celadon (WIP)", "Fuchsia (WIP)", "Saffron (WIP)", "Cinnabar (WIP)", "Viridian (Unavailable)", "Back"]
+    print("Select your Kanto Gym")
+    menu_options = ["Pewter", "Cerulean", "Vermillion", "Celadon", "Fuchsia (WIP)", "Saffron (WIP)", "Cinnabar (WIP)", "Viridian (Not Scripted in PokeMMO)", "Back"]
 
     for i in range(len(menu_options)):
         print("[{}] {}".format(i+1, menu_options[i]))
@@ -20,6 +20,13 @@ def initialize(gym):
     
     sleep(1)
     print("In Progress...")
+
+def cut_tree():
+    for i in range(5):
+        pg.press('e')
+        sleep(0.25)
+    
+    sleep(0.4)
 
 def pewter_pathing_in():
     initialize("Pewter")
@@ -74,27 +81,58 @@ def vermillion_pathing_in():
     sleep(0.56)
     pg.keyUp('s')
     pg.keyDown('a')
-    sleep(0.363)
+    sleep(0.364)
     pg.keyUp('a')
     pg.keyDown('s')
     sleep(0.1)
     pg.keyUp('s')
-
-    for i in range(5):
-        pg.press('e')
-        sleep(0.25)
-
-    sleep(0.4)
+    cut_tree()
     pg.keyDown('s')
     sleep(0.4)
     pg.keyUp('s')
     pg.keyDown('a')
-    sleep(0.3)
+    sleep(0.302)
     pg.keyUp('a')
     pg.keyDown('w')
     sleep(0.2)
     pg.keyUp('w')
     print("Entering Vermillion City Gym...")
+
+def celadon_pathing_in():
+    initialize("Celadon")
+    pg.press('2')
+    pg.keyDown('s')
+    sleep(0.12)
+    pg.keyUp('s')
+    pg.keyDown('a')
+    sleep(0.45)
+    pg.keyUp('a')
+    pg.keyDown('s')
+    sleep(0.6)
+    pg.keyUp('s')
+    pg.keyDown('a')
+    sleep(0.74)
+    pg.keyUp('a')
+    pg.keyDown('s')
+    sleep(0.7)
+    pg.keyUp('s')
+    pg.keyDown('d')
+    sleep(0.65)
+    pg.keyUp('d')
+    pg.keyDown('s')
+    sleep(0.2)
+    pg.keyUp('s')
+    cut_tree()
+    pg.keyDown('s')
+    sleep(0.4)
+    pg.keyUp('s')
+    pg.keyDown('a')
+    sleep(2.2)
+    pg.keyUp('a')
+    pg.keyDown('w')
+    sleep(1)
+    pg.keyUp('w')
+    print("Entering Celadon City Gym...")
 
 def main():
     menu()
@@ -110,7 +148,7 @@ def main():
         vermillion_pathing_in()
 
     elif user_input == 4:
-        print("Unavailable")
+        celadon_pathing_in()
 
     elif user_input == 5:
         print("Unavailable")

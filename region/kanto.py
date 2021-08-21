@@ -7,7 +7,7 @@ except ModuleNotFoundError:
 
 def menu():
     print("Select your Kanto Gym")
-    menu_options = ["Pewter", "Cerulean", "Vermillion", "Celadon", "Fuchsia", "Saffron (WIP)", "Cinnabar (WIP)", "Viridian (Not Scripted in PokeMMO)", "Back"]
+    menu_options = ["Pewter", "Cerulean", "Vermillion", "Celadon", "Fuchsia", "Saffron (WIP)", "Cinnabar (WIP)", "Viridian (Unavailable)", "Back"]
 
     for i in range(len(menu_options)):
         print("[{}] {}".format(i+1, menu_options[i]))
@@ -172,7 +172,7 @@ def main():
         print("Unavailable")
 
     elif user_input == 8:
-        print("Unavailable")
+        print("Viridian City Gym is currently not scripted in PokeMMO")
 
     elif user_input == 9:
         return

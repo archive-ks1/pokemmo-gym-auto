@@ -30,7 +30,6 @@ def cut_tree():
 
 def pewter_pathing_in():
     initialize("Pewter")
-    pg.press('2')
     pg.keyDown('d')
     sleep(0.5)
     pg.keyUp('d')
@@ -53,7 +52,6 @@ def pewter_pathing_in():
 
 def cerulean_pathing_in():
     initialize("Cerulean")
-    pg.press('2')
     pg.keyDown('s')
     sleep(0.02)
     pg.keyUp('s')
@@ -67,7 +65,6 @@ def cerulean_pathing_in():
 
 def vermillion_pathing_in():
     initialize("Vermillion")
-    pg.press('2')
     pg.keyDown('d')
     sleep(1)
     pg.keyUp('d')
@@ -100,7 +97,6 @@ def vermillion_pathing_in():
 
 def celadon_pathing_in():
     initialize("Celadon")
-    pg.press('2')
     pg.keyDown('s')
     sleep(0.12)
     pg.keyUp('s')
@@ -136,7 +132,6 @@ def celadon_pathing_in():
 
 def fuchsia_pathing_in():
     initialize("Fuchsia")
-    pg.press('2')
     pg.press('s')
     pg.keyDown('a')
     sleep(1.2)
@@ -151,18 +146,23 @@ def main():
     user_input = int(input('\nEnter option: '))
 
     if user_input == 1:
+        pg.press('2')
         pewter_pathing_in()
     
     elif user_input == 2:
+        pg.press('2')
         cerulean_pathing_in()
 
     elif user_input == 3:
+        pg.press('2')
         vermillion_pathing_in()
 
     elif user_input == 4:
+        pg.press('2')
         celadon_pathing_in()
 
     elif user_input == 5:
+        pg.press('2')
         fuchsia_pathing_in()
 
     elif user_input == 6:

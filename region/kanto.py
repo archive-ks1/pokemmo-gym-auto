@@ -7,7 +7,7 @@ except ModuleNotFoundError:
 
 def menu():
     print("Select your Kanto Gym")
-    menu_options = ["Pewter", "Cerulean", "Vermillion", "Celadon", "Fuchsia", "Saffron (WIP)", "Cinnabar (WIP)", "Viridian (Unavailable)", "Back"]
+    menu_options = ["Pewter", "Cerulean", "Vermillion", "Celadon", "Fuchsia", "Saffron", "Cinnabar (WIP)", "Viridian (Unavailable)", "Back"]
 
     for i in range(len(menu_options)):
         print("[{}] {}".format(i+1, menu_options[i]))
@@ -29,7 +29,6 @@ def cut_tree():
     sleep(0.4)
 
 def pewter_pathing_in():
-    initialize("Pewter")
     pg.keyDown('d')
     sleep(0.5)
     pg.keyUp('d')
@@ -51,7 +50,6 @@ def pewter_pathing_in():
     print("Entering Pewter City Gym...")
 
 def cerulean_pathing_in():
-    initialize("Cerulean")
     pg.keyDown('s')
     sleep(0.02)
     pg.keyUp('s')
@@ -64,7 +62,6 @@ def cerulean_pathing_in():
     print("Entering Cerulean City Gym...")
 
 def vermillion_pathing_in():
-    initialize("Vermillion")
     pg.keyDown('d')
     sleep(1)
     pg.keyUp('d')
@@ -96,7 +93,6 @@ def vermillion_pathing_in():
     print("Entering Vermillion City Gym...")
 
 def celadon_pathing_in():
-    initialize("Celadon")
     pg.keyDown('s')
     sleep(0.12)
     pg.keyUp('s')
@@ -131,7 +127,6 @@ def celadon_pathing_in():
     print("Entering Celadon City Gym...")
 
 def fuchsia_pathing_in():
-    initialize("Fuchsia")
     pg.press('s')
     pg.keyDown('a')
     sleep(1.2)
@@ -141,32 +136,55 @@ def fuchsia_pathing_in():
     pg.keyUp('w')
     print("Entering Fuchsia City Gym...")
 
+def saffron_pathing_in():
+    pg.press('s')
+    pg.keyDown('d')
+    sleep(2)
+    pg.keyUp('d')
+    pg.keyDown('w')
+    sleep(1.96)
+    pg.keyUp('w')
+    pg.keyDown('a')
+    sleep(0.345)
+    pg.keyUp('a')
+    pg.keyDown('w')
+    sleep(0.4)
+    pg.keyUp('w')
+    print("Entering Saffron City Gym...")
+
 def main():
     menu()
     user_input = int(input('\nEnter option: '))
 
     if user_input == 1:
+        initialize("Pewter")
         pg.press('2')
         pewter_pathing_in()
     
     elif user_input == 2:
+        initialize("Cerulean")
         pg.press('2')
         cerulean_pathing_in()
 
     elif user_input == 3:
+        initialize("Vermillion")
         pg.press('2')
         vermillion_pathing_in()
 
     elif user_input == 4:
+        initialize("Celadon")
         pg.press('2')
         celadon_pathing_in()
 
     elif user_input == 5:
+        initialize("Fuchsia")
         pg.press('2')
         fuchsia_pathing_in()
 
     elif user_input == 6:
-        print("Unavailable")
+        initialize("Saffron")
+        pg.press('2')
+        saffron_pathing_in()
 
     elif user_input == 7:
         print("Unavailable")

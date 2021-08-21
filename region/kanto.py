@@ -7,7 +7,7 @@ except ModuleNotFoundError:
 
 def menu():
     print("Kanto Gyms")
-    menu_options = ["Pewter", "Cerulean", "Vermillion (WIP)", "Celadon (WIP)", "Fuchsia (WIP)", "Saffron (WIP)", "Cinnabar (WIP)", "Viridian (Unavailable)", "Back"]
+    menu_options = ["Pewter", "Cerulean", "Vermillion", "Celadon (WIP)", "Fuchsia (WIP)", "Saffron (WIP)", "Cinnabar (WIP)", "Viridian (Unavailable)", "Back"]
 
     for i in range(len(menu_options)):
         print("[{}] {}".format(i+1, menu_options[i]))
@@ -58,6 +58,44 @@ def cerulean_pathing_in():
     pg.keyUp('w')
     print("Entering Cerulean City Gym...")
 
+def vermillion_pathing_in():
+    initialize("Vermillion")
+    pg.press('2')
+    pg.keyDown('d')
+    sleep(1)
+    pg.keyUp('d')
+    pg.keyDown('s')
+    sleep(0.5)
+    pg.keyUp('s')
+    pg.keyDown('a')
+    sleep(0.3)
+    pg.keyUp('a')
+    pg.keyDown('s')
+    sleep(0.56)
+    pg.keyUp('s')
+    pg.keyDown('a')
+    sleep(0.363)
+    pg.keyUp('a')
+    pg.keyDown('s')
+    sleep(0.1)
+    pg.keyUp('s')
+
+    for i in range(5):
+        pg.press('e')
+        sleep(0.25)
+
+    sleep(0.4)
+    pg.keyDown('s')
+    sleep(0.4)
+    pg.keyUp('s')
+    pg.keyDown('a')
+    sleep(0.3)
+    pg.keyUp('a')
+    pg.keyDown('w')
+    sleep(0.2)
+    pg.keyUp('w')
+    print("Entering Vermillion City Gym...")
+
 def main():
     menu()
     user_input = int(input('\nEnter option: '))
@@ -69,7 +107,7 @@ def main():
         cerulean_pathing_in()
 
     elif user_input == 3:
-        print("Unavailable")
+        vermillion_pathing_in()
 
     elif user_input == 4:
         print("Unavailable")

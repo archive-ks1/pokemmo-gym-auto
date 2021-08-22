@@ -290,6 +290,30 @@ def approach_sabrina():
     sleep(0.8)
     pg.keyUp('w')
 
+def saffron_pathing_out():
+    pg.keyDown('s')
+    sleep(0.7)
+    pg.keyUp('s')
+    pg.keyDown('d')
+    sleep(1)
+    pg.keyUp('d')
+    pg.keyDown('w')
+    sleep(1.2)
+    pg.keyUp('w')
+    pg.keyDown('d')
+    sleep(8)
+    pg.keyUp('d')
+    sleep(1)
+    pg.keyDown('s')
+    sleep(0.6)
+    pg.keyUp('s')
+    pg.keyDown('a')
+    sleep(0.6)
+    pg.keyUp('a')
+    pg.keyDown('s')
+    sleep(0.2)
+    pg.keyUp('s')
+
 def cinnabar_pathing_in():
     pg.keyDown('d')
     sleep(0.5)
@@ -370,6 +394,8 @@ def main():
         pg.press('shift')
         approach_sabrina()
         # enter combat
+        sleep(1)
+        saffron_pathing_out()
 
     elif user_input == 7:
         initialize("Cinnabar")

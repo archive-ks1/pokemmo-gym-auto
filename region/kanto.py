@@ -149,18 +149,19 @@ def vermillion_pathing_out():
     pg.press('s')
 
 def celadon_pathing_in():
+    sleep(0.1)
     pg.press('s')
     pg.keyDown('a')
-    sleep(0.45)
+    sleep(0.452)
     pg.keyUp('a')
     pg.keyDown('s')
     sleep(0.74)
     pg.keyUp('s')
     pg.keyDown('a')
-    sleep(0.78)
+    sleep(0.791)
     pg.keyUp('a')
     pg.keyDown('s')
-    sleep(0.74)
+    sleep(0.7)
     pg.keyUp('s')
     pg.keyDown('d')
     sleep(0.65)
@@ -170,10 +171,10 @@ def celadon_pathing_in():
     pg.keyUp('s')
     cut_tree()
     pg.keyDown('s')
-    sleep(0.4)
+    sleep(0.345)
     pg.keyUp('s')
     pg.keyDown('a')
-    sleep(2.2)
+    sleep(2.23)
     pg.keyUp('a')
     pg.keyDown('w')
     sleep(1)
@@ -188,6 +189,11 @@ def approach_erika():
     pg.keyDown('w')
     sleep(0.8)
     pg.keyUp('w')
+
+def celadon_pathing_out():
+    pg.keyDown('s')
+    sleep(2.8)
+    pg.keyUp('s')
 
 def fuchsia_pathing_in():
     pg.press('s')
@@ -273,6 +279,8 @@ def main():
         pg.press('shift')
         approach_erika()
         # enter combat
+        sleep(1)
+        celadon_pathing_out()
 
     elif user_input == 5:
         initialize("Fuchsia")

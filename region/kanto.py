@@ -71,6 +71,22 @@ def cerulean_pathing_in():
     pg.keyUp('w')
     print("Entering Cerulean City Gym...")
 
+def approach_misty():
+    pg.press('d')
+    pg.keyDown('w')
+    sleep(1.3)
+    pg.keyUp('w')
+    pg.keyDown('d')
+    sleep(0.6)
+    pg.keyUp('d')
+    pg.keyDown('w')
+    sleep(0.6)
+    pg.keyUp('w')
+    pg.keyDown('a')
+    sleep(0.6)
+    pg.keyUp('a')
+    pg.press('w')
+
 def vermillion_pathing_in():
     pg.keyDown('d')
     sleep(1)
@@ -194,6 +210,10 @@ def main():
         initialize("Cerulean")
         pg.press('2')
         cerulean_pathing_in()
+        sleep(1)
+        pg.press('shift')
+        approach_misty()
+        # enter combat
 
     elif user_input == 3:
         initialize("Vermillion")

@@ -124,7 +124,7 @@ def vermillion_pathing_in():
     pg.keyUp('s')
     cut_tree()
     pg.keyDown('s')
-    sleep(0.4)
+    sleep(0.45)
     pg.keyUp('s')
     pg.keyDown('a')
     sleep(0.302)
@@ -133,6 +133,13 @@ def vermillion_pathing_in():
     sleep(0.2)
     pg.keyUp('w')
     print("Entering Vermillion City Gym...")
+
+def approach_surge():
+    pg.press('d')
+    pg.keyDown('w')
+    sleep(3)
+    pg.keyUp('w')
+    pg.press('a')
 
 def celadon_pathing_in():
     pg.keyDown('s')
@@ -237,6 +244,10 @@ def main():
         initialize("Vermillion")
         pg.press('2')
         vermillion_pathing_in()
+        sleep(1)
+        pg.press('shift')
+        approach_surge()
+        # enter combat
 
     elif user_input == 4:
         initialize("Celadon")

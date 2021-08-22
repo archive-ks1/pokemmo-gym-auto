@@ -39,7 +39,7 @@ def pewter_pathing_in():
     sleep(1.25)
     pg.keyUp('a')
     pg.keyDown('s')
-    sleep(0.6)
+    sleep(0.4)
     pg.keyUp('s')
     pg.keyDown('d')
     sleep(0.54)
@@ -48,6 +48,11 @@ def pewter_pathing_in():
     sleep(0.2)
     pg.keyUp('w')
     print("Entering Pewter City Gym...")
+
+def approach_brock():
+    pg.keyDown('w')
+    sleep(1.4)
+    pg.keyUp('w')
 
 def cerulean_pathing_in():
     pg.keyDown('s')
@@ -173,6 +178,9 @@ def main():
         initialize("Pewter")
         pg.press('2')
         pewter_pathing_in()
+        sleep(1)
+        pg.press('shift')
+        approach_brock()
     
     elif user_input == 2:
         initialize("Cerulean")

@@ -256,18 +256,39 @@ def fuchsia_pathing_out():
 def saffron_pathing_in():
     pg.press('s')
     pg.keyDown('d')
-    sleep(2)
+    sleep(2.02)
     pg.keyUp('d')
     pg.keyDown('w')
     sleep(1.96)
     pg.keyUp('w')
     pg.keyDown('a')
-    sleep(0.345)
+    sleep(0.25)
     pg.keyUp('a')
     pg.keyDown('w')
     sleep(0.4)
     pg.keyUp('w')
     print("Entering Saffron City Gym...")
+
+def approach_sabrina():
+    pg.keyDown('d')
+    sleep(0.8)
+    pg.keyUp('d')
+    pg.keyDown('w')
+    sleep(1)
+    pg.keyUp('w')
+    pg.keyDown('a')
+    sleep(8)
+    pg.keyUp('a')
+    pg.keyDown('s')
+    sleep(1)
+    pg.keyUp('s')
+    sleep(1)
+    pg.keyDown('a')
+    sleep(0.6)
+    pg.keyUp('a')
+    pg.keyDown('w')
+    sleep(0.8)
+    pg.keyUp('w')
 
 def cinnabar_pathing_in():
     pg.keyDown('d')
@@ -345,6 +366,10 @@ def main():
         initialize("Saffron")
         pg.press('2')
         saffron_pathing_in()
+        sleep(1)
+        pg.press('shift')
+        approach_sabrina()
+        # enter combat
 
     elif user_input == 7:
         initialize("Cinnabar")

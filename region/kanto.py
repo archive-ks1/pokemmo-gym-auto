@@ -26,7 +26,7 @@ def cut_tree():
         pg.press('e')
         sleep(0.25)
     
-    sleep(0.4)
+    sleep(0.6)
 
 def pewter_pathing_in():
     pg.keyDown('d')
@@ -149,20 +149,18 @@ def vermillion_pathing_out():
     pg.press('s')
 
 def celadon_pathing_in():
-    pg.keyDown('s')
-    sleep(0.12)
-    pg.keyUp('s')
+    pg.press('s')
     pg.keyDown('a')
     sleep(0.45)
     pg.keyUp('a')
     pg.keyDown('s')
-    sleep(0.6)
+    sleep(0.74)
     pg.keyUp('s')
     pg.keyDown('a')
-    sleep(0.74)
+    sleep(0.78)
     pg.keyUp('a')
     pg.keyDown('s')
-    sleep(0.7)
+    sleep(0.74)
     pg.keyUp('s')
     pg.keyDown('d')
     sleep(0.65)
@@ -181,6 +179,15 @@ def celadon_pathing_in():
     sleep(1)
     pg.keyUp('w')
     print("Entering Celadon City Gym...")
+
+def approach_erika():
+    pg.keyDown('w')
+    sleep(1.4)
+    pg.keyUp('w')
+    cut_tree()
+    pg.keyDown('w')
+    sleep(0.8)
+    pg.keyUp('w')
 
 def fuchsia_pathing_in():
     pg.press('s')
@@ -262,6 +269,10 @@ def main():
         initialize("Celadon")
         pg.press('2')
         celadon_pathing_in()
+        sleep(1)
+        pg.press('shift')
+        approach_erika()
+        # enter combat
 
     elif user_input == 5:
         initialize("Fuchsia")

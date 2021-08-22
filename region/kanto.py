@@ -77,15 +77,31 @@ def approach_misty():
     sleep(1.3)
     pg.keyUp('w')
     pg.keyDown('d')
-    sleep(0.6)
+    sleep(0.4)
     pg.keyUp('d')
     pg.keyDown('w')
-    sleep(0.6)
+    sleep(0.4)
     pg.keyUp('w')
     pg.keyDown('a')
     sleep(0.6)
     pg.keyUp('a')
     pg.press('w')
+
+def cerulean_pathing_out():
+    pg.keyDown('d')
+    sleep(0.6)
+    pg.keyUp('d')
+    pg.keyDown('s')
+    sleep(0.6)
+    pg.keyUp('s')
+    pg.keyDown('a')
+    sleep(0.4)
+    pg.keyUp('a')
+    pg.keyDown('s')
+    sleep(1.4)
+    pg.keyUp('s')
+    pg.press('a')
+    pg.press('s')
 
 def vermillion_pathing_in():
     pg.keyDown('d')
@@ -214,6 +230,8 @@ def main():
         pg.press('shift')
         approach_misty()
         # enter combat
+        sleep(1)
+        cerulean_pathing_out()
 
     elif user_input == 3:
         initialize("Vermillion")

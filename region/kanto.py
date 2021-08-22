@@ -327,6 +327,24 @@ def cinnabar_pathing_in():
     pg.keyUp('w')
     print("Entering Cinnabar City Gym...")
 
+def approach_blaine():
+    pg.press('d')
+    pg.keyDown('w')
+    sleep(3.5)
+    pg.keyUp('w')
+    pg.keyDown('a')
+    sleep(1.4)
+    pg.keyUp('a')
+    pg.keyDown('s')
+    sleep(3.4)
+    pg.keyUp('s')
+    pg.keyDown('a')
+    sleep(2.2)
+    pg.keyUp('a')
+    pg.keyDown('w')
+    sleep(3.4)
+    pg.keyUp('w')
+
 def main():
     menu()
     user_input = int(input('\nEnter option: '))
@@ -401,6 +419,9 @@ def main():
         initialize("Cinnabar")
         pg.press('2')
         cinnabar_pathing_in()
+        sleep(1)
+        pg.press('shift')
+        approach_blaine()
 
     elif user_input == 8:
         print("Viridian City Gym is currently not scripted in PokeMMO")

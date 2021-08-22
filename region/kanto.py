@@ -345,6 +345,29 @@ def approach_blaine():
     sleep(3.4)
     pg.keyUp('w')
 
+def cinnabar_pathing_out():
+    pg.keyDown('s')
+    sleep(3.2)
+    pg.keyUp('s')
+    pg.keyDown('d')
+    sleep(2.2)
+    pg.keyUp('d')
+    pg.keyDown('w')
+    sleep(3.5)
+    pg.keyUp('w')
+    pg.keyDown('d')
+    sleep(1.34)
+    pg.keyUp('d')
+    pg.keyDown('s')
+    sleep(3.5)
+    pg.keyUp('s')
+    pg.keyDown('a')
+    sleep(0.1)
+    pg.keyUp('a')
+    pg.keyDown('s')
+    sleep(1)
+    pg.keyUp('s')
+
 def main():
     menu()
     user_input = int(input('\nEnter option: '))
@@ -422,6 +445,9 @@ def main():
         sleep(1)
         pg.press('shift')
         approach_blaine()
+        # enter combat
+        sleep(1)
+        cinnabar_pathing_out()
 
     elif user_input == 8:
         print("Viridian City Gym is currently not scripted in PokeMMO")

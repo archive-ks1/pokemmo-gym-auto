@@ -141,6 +141,13 @@ def approach_surge():
     pg.keyUp('w')
     pg.press('a')
 
+def vermillion_pathing_out():
+    pg.keyDown('s')
+    sleep(3)
+    pg.keyUp('s')
+    pg.press('a')
+    pg.press('s')
+
 def celadon_pathing_in():
     pg.keyDown('s')
     sleep(0.12)
@@ -248,6 +255,8 @@ def main():
         pg.press('shift')
         approach_surge()
         # enter combat
+        sleep(1)
+        vermillion_pathing_out()
 
     elif user_input == 4:
         initialize("Celadon")

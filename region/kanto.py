@@ -54,6 +54,11 @@ def approach_brock():
     sleep(1.4)
     pg.keyUp('w')
 
+def pewter_pathing_out():
+    pg.keyDown('s')
+    sleep(1.5)
+    pg.keyUp('s')
+
 def cerulean_pathing_in():
     pg.keyDown('s')
     sleep(0.02)
@@ -181,6 +186,9 @@ def main():
         sleep(1)
         pg.press('shift')
         approach_brock()
+        # enter combat
+        sleep(1)
+        pewter_pathing_out()
     
     elif user_input == 2:
         initialize("Cerulean")
